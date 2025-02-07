@@ -78,4 +78,3 @@ app.get("/",(req,res)=>{
 app.listen(port,()=>{
     console.log(`server is working on port ${port}...`)
 })
-module.exports=Power
