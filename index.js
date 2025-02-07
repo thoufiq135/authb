@@ -8,7 +8,6 @@ const app=express()
 app.use(cors())
 app.use(express.json())
 const uri=process.env.MONGU
-// const uri ="mongodb://127.0.0.1:27017/auth"
 mongoose.connect(uri).then(()=>console.log("Connected to mongo db")).catch(err=>console.log("Cannot connect to mongo db"))
 const schema=new mongoose.Schema({
     name:String,
@@ -74,8 +73,7 @@ app.post("/Signup",(req,res)=>{
 })
 // --------------------------------------------------------------------------------------------------------------------------------------------
 app.get("/",(req,res)=>{    
-    res.send("<h1>Hello world</h1>")
- 
+    res.send("<h1>Hello world</h1>") 
 })
 app.listen(port,()=>{
     console.log(`server is working on port ${port}...`)
